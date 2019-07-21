@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="my blog">
-<meta name="keywords" content="欢迎！">
+<meta name="description" content="题目：给你两个长度相等的整数数组，返回下面表达式的最大值： 1|arr1[i] - arr1[j]| + |arr2[i] - arr2[j]| + |i - j|  其中下标 i，j 满足 0 &amp;lt;= i, j &amp;lt; arr1.length。 思路：其实这道题的引申问题也就是求最远曼哈顿距离。而最远曼哈顿距离也可以引申为新增一个点，求该点到一群点的最大曼哈顿距离。 最大曼哈顿距离的求解方">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my paper">
-<meta property="og:url" content="https://xytjcxy.github.io/2019/07/18/my-paper/index.html">
+<meta property="og:title" content="LeetCode1131 最远曼哈顿距离">
+<meta property="og:url" content="https://xytjcxy.github.io/2019/07/21/LeetCode1131-最远曼哈顿距离/index.html">
 <meta property="og:site_name" content="Air">
-<meta property="og:description" content="my blog">
+<meta property="og:description" content="题目：给你两个长度相等的整数数组，返回下面表达式的最大值： 1|arr1[i] - arr1[j]| + |arr2[i] - arr2[j]| + |i - j|  其中下标 i，j 满足 0 &amp;lt;= i, j &amp;lt; arr1.length。 思路：其实这道题的引申问题也就是求最远曼哈顿距离。而最远曼哈顿距离也可以引申为新增一个点，求该点到一群点的最大曼哈顿距离。 最大曼哈顿距离的求解方">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-18T13:37:27.219Z">
+<meta property="og:updated_time" content="2019-07-21T12:46:26.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my paper">
-<meta name="twitter:description" content="my blog">
+<meta name="twitter:title" content="LeetCode1131 最远曼哈顿距离">
+<meta name="twitter:description" content="题目：给你两个长度相等的整数数组，返回下面表达式的最大值： 1|arr1[i] - arr1[j]| + |arr2[i] - arr2[j]| + |i - j|  其中下标 i，j 满足 0 &amp;lt;= i, j &amp;lt; arr1.length。 思路：其实这道题的引申问题也就是求最远曼哈顿距离。而最远曼哈顿距离也可以引申为新增一个点，求该点到一群点的最大曼哈顿距离。 最大曼哈顿距离的求解方">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://xytjcxy.github.io/2019/07/18/my-paper/">
+  <link rel="canonical" href="https://xytjcxy.github.io/2019/07/21/LeetCode1131-最远曼哈顿距离/">
 
 
 
 
 
-  <title>my paper | Air</title>
+  <title>LeetCode1131 最远曼哈顿距离 | Air</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/07/18/my-paper/">
+    <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/07/21/LeetCode1131-最远曼哈顿距离/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Air">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">my paper</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode1131 最远曼哈顿距离</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-18T21:37:27+08:00">
-                2019-07-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-21T20:31:14+08:00">
+                2019-07-21
               </time>
             
 
@@ -330,7 +330,18 @@
       
 
       
-        
+        <p>题目：给你两个长度相等的整数数组，返回下面表达式的最大值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|arr1[i] - arr1[j]| + |arr2[i] - arr2[j]| + |i - j|</span><br></pre></td></tr></table></figure>
+
+<p>其中下标 <code>i</code>，<code>j</code> 满足 <code>0 &lt;= i, j &lt; arr1.length</code>。</p>
+<p>思路：其实这道题的引申问题也就是求最远曼哈顿距离。而最远曼哈顿距离也可以引申为新增一个点，求该点到一群点的最大曼哈顿距离。</p>
+<p>最大曼哈顿距离的求解方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|x1 - x2| + |y1 - y2| </span><br><span class="line">等价于 x1-x2 + y1-y2 (1,1), -x1+x2 + -y1+y2 (-1,-1), x1-x2 + -y1+y2 (1,-1), -x1+x2 + y1-y2 (-1,1) </span><br><span class="line">也就等价于 (x1,y1)-(x2,y2),(-(x1,y1))-(-(x2,y2)),(x1,-y1)-(x2,-y2),(-x1,y1)-(-x2,y2)</span><br><span class="line">最后的最大距离的点，必然是位于这四种情况中的某一种，因此对于每种情况，保留其中的min坐标，对于新加入的点，若为最大，必然是减去min坐标</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxAbsValExpr</span><span class="params">(self, arr1: List[int], arr2: List[int])</span> -&gt; int:</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i, j <span class="keyword">in</span> [[<span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">-1</span>], [<span class="number">-1</span>, <span class="number">-1</span>], [<span class="number">-1</span>, <span class="number">1</span>]]:</span><br><span class="line">            close = arr1[<span class="number">0</span>] * i + arr2[<span class="number">0</span>] * j</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">1</span>, len(arr1)):</span><br><span class="line">                p = arr1[k] * i + arr2[k] * j + k</span><br><span class="line">                res = max(res, p - close)</span><br><span class="line">                close = min(close, p)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+<p>反思：这道题其实很有借鉴意义，因为之前面试的时候就遇到过这道题，结果没有做出来。原来就是四种情况，每次保存每种情况最小的那个坐标即可。</p>
+
       
     </div>
     
@@ -345,6 +356,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+        </div>
+      
 
       
       
@@ -354,15 +371,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/07/20/leetcode1130/" rel="next" title="LeetCode1130-DP">
+                <i class="fa fa-chevron-left"></i> LeetCode1130-DP
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/18/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -430,7 +447,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
