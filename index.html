@@ -263,6 +263,136 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/08/03/git获取指定svn版本的代码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Air">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Air">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/03/git获取指定svn版本的代码/" itemprop="url">git获取指定svn版本的代码</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-03T21:22:04+08:00">
+                2019-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文主要介绍如何通过git，获取svn指定版本号的代码</p>
+<h1 id="在git仓库中与远程的svn仓库关联"><a href="#在git仓库中与远程的svn仓库关联" class="headerlink" title="在git仓库中与远程的svn仓库关联"></a>在git仓库中与远程的svn仓库关联</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> -r 1:HEAD,表示更新从版本1到最新版本的svn仓库</span><br><span class="line"><span class="meta">#</span> svn://localhost,表示svn远程仓库的url</span><br><span class="line"><span class="meta">#</span> .,表示将clone的svn更新到当前文件夹下</span><br><span class="line">git svn clone -r 1:HEAD svn://localhost .</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/08/03/git获取指定svn版本的代码/git%E4%B8%8Esvn%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94.png" alt="git与svn仓库关联"></p>
+<p><img src="/2019/08/03/git获取指定svn版本的代码/r6.png" alt="r6"></p>
+<h1 id="git查询指定svn版本对应的节点"><a href="#git查询指定svn版本对应的节点" class="headerlink" title="git查询指定svn版本对应的节点"></a>git查询指定svn版本对应的节点</h1><p>假设我想查询r4对应的git节点号</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git svn reset r4</span><br><span class="line"><span class="meta">#</span> 会显示：r4 = 4945ec51baa115ecce9b7fdf78aa8ae716345855 (refs/remotes/git-svn)</span><br></pre></td></tr></table></figure>
+
+<h1 id="将git回退至指定版本"><a href="#将git回退至指定版本" class="headerlink" title="将git回退至指定版本"></a>将git回退至指定版本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 4945ec51baa115ecce9b7fdf78aa8ae716345855</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2019/08/03/git获取指定svn版本的代码/r4.png" alt="r4"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/07/28/化整为零的DP求解思路/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -927,7 +1057,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -940,7 +1070,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
