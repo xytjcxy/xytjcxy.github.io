@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="前言本文主要介绍如何通过git，获取svn指定版本号的代码 在git仓库中与远程的svn仓库关联1234# -r 1:HEAD,表示更新从版本1到最新版本的svn仓库# svn://localhost,表示svn远程仓库的url# .,表示将clone的svn更新到当前文件夹下git svn clone -r 1:HEAD svn://localhost .    git查询指定svn版本对应的节">
+<meta name="description" content="前言本文主要介绍如何通过git，获取svn指定版本号的代码 svn的下载、安装、配置参见https://blog.csdn.net/WinstonLau/article/details/79794967 对同一个项目同时使用svn参见https://blog.csdn.net/zzxiang1985/article/details/75212244 本文是因为项目需要，所以必须将svn的版本号和g">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git获取指定svn版本的代码">
 <meta property="og:url" content="https://xytjcxy.github.io/2019/08/03/git获取指定svn版本的代码/index.html">
 <meta property="og:site_name" content="Air">
-<meta property="og:description" content="前言本文主要介绍如何通过git，获取svn指定版本号的代码 在git仓库中与远程的svn仓库关联1234# -r 1:HEAD,表示更新从版本1到最新版本的svn仓库# svn://localhost,表示svn远程仓库的url# .,表示将clone的svn更新到当前文件夹下git svn clone -r 1:HEAD svn://localhost .    git查询指定svn版本对应的节">
+<meta property="og:description" content="前言本文主要介绍如何通过git，获取svn指定版本号的代码 svn的下载、安装、配置参见https://blog.csdn.net/WinstonLau/article/details/79794967 对同一个项目同时使用svn参见https://blog.csdn.net/zzxiang1985/article/details/75212244 本文是因为项目需要，所以必须将svn的版本号和g">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://xytjcxy.github.io/2019/08/03/git获取指定svn版本的代码/git%E4%B8%8Esvn%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94.png">
 <meta property="og:image" content="https://xytjcxy.github.io/2019/08/03/git获取指定svn版本的代码/r6.png">
 <meta property="og:image" content="https://xytjcxy.github.io/2019/08/03/git获取指定svn版本的代码/r4.png">
-<meta property="og:updated_time" content="2019-08-03T14:07:18.851Z">
+<meta property="og:updated_time" content="2019-08-03T15:51:30.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git获取指定svn版本的代码">
-<meta name="twitter:description" content="前言本文主要介绍如何通过git，获取svn指定版本号的代码 在git仓库中与远程的svn仓库关联1234# -r 1:HEAD,表示更新从版本1到最新版本的svn仓库# svn://localhost,表示svn远程仓库的url# .,表示将clone的svn更新到当前文件夹下git svn clone -r 1:HEAD svn://localhost .    git查询指定svn版本对应的节">
+<meta name="twitter:description" content="前言本文主要介绍如何通过git，获取svn指定版本号的代码 svn的下载、安装、配置参见https://blog.csdn.net/WinstonLau/article/details/79794967 对同一个项目同时使用svn参见https://blog.csdn.net/zzxiang1985/article/details/75212244 本文是因为项目需要，所以必须将svn的版本号和g">
 <meta name="twitter:image" content="https://xytjcxy.github.io/2019/08/03/git获取指定svn版本的代码/git%E4%B8%8Esvn%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94.png">
 
 
@@ -335,6 +335,9 @@
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文主要介绍如何通过git，获取svn指定版本号的代码</p>
+<p>svn的下载、安装、配置参见<a href="https://blog.csdn.net/WinstonLau/article/details/79794967" target="_blank" rel="noopener">https://blog.csdn.net/WinstonLau/article/details/79794967</a></p>
+<p>对同一个项目同时使用svn参见<a href="https://blog.csdn.net/zzxiang1985/article/details/75212244" target="_blank" rel="noopener">https://blog.csdn.net/zzxiang1985/article/details/75212244</a></p>
+<p>本文是因为项目需要，所以必须将svn的版本号和git的节点号对齐。如果你刚开始创建自己的项目，建议还是使用git，毕竟这是主流，同时也方便离线提交代码！</p>
 <h1 id="在git仓库中与远程的svn仓库关联"><a href="#在git仓库中与远程的svn仓库关联" class="headerlink" title="在git仓库中与远程的svn仓库关联"></a>在git仓库中与远程的svn仓库关联</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> -r 1:HEAD,表示更新从版本1到最新版本的svn仓库</span><br><span class="line"><span class="meta">#</span> svn://localhost,表示svn远程仓库的url</span><br><span class="line"><span class="meta">#</span> .,表示将clone的svn更新到当前文件夹下</span><br><span class="line">git svn clone -r 1:HEAD svn://localhost .</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/08/03/git获取指定svn版本的代码/git%E4%B8%8Esvn%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94.png" alt="git与svn仓库关联"></p>
@@ -345,6 +348,8 @@
 <h1 id="将git回退至指定版本"><a href="#将git回退至指定版本" class="headerlink" title="将git回退至指定版本"></a>将git回退至指定版本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 4945ec51baa115ecce9b7fdf78aa8ae716345855</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/08/03/git获取指定svn版本的代码/r4.png" alt="r4"></p>
+<h1 id="将git由当前svn版本更新至最新svn版本"><a href="#将git由当前svn版本更新至最新svn版本" class="headerlink" title="将git由当前svn版本更新至最新svn版本"></a>将git由当前svn版本更新至最新svn版本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> git查询当前svn所属版本号，比如我当前是4</span><br><span class="line">git svn log</span><br><span class="line"><span class="meta">#</span> 将git更新至svn最新节点</span><br><span class="line">git svn fetch -r 4:HEAD</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -384,6 +389,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/04/落泪的星期六/" rel="prev" title="落泪的星期六">
+                落泪的星期六 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -465,7 +474,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -521,7 +530,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在git仓库中与远程的svn仓库关联"><span class="nav-number">2.</span> <span class="nav-text">在git仓库中与远程的svn仓库关联</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git查询指定svn版本对应的节点"><span class="nav-number">3.</span> <span class="nav-text">git查询指定svn版本对应的节点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将git回退至指定版本"><span class="nav-number">4.</span> <span class="nav-text">将git回退至指定版本</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在git仓库中与远程的svn仓库关联"><span class="nav-number">2.</span> <span class="nav-text">在git仓库中与远程的svn仓库关联</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git查询指定svn版本对应的节点"><span class="nav-number">3.</span> <span class="nav-text">git查询指定svn版本对应的节点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将git回退至指定版本"><span class="nav-number">4.</span> <span class="nav-text">将git回退至指定版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将git由当前svn版本更新至最新svn版本"><span class="nav-number">5.</span> <span class="nav-text">将git由当前svn版本更新至最新svn版本</span></a></li></ol></div>
             
 
           </div>

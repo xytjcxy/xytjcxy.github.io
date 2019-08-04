@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Grasp the fate with my hand rather than the fortune!">
-<meta name="keywords" content="欢迎！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Air">
-<meta property="og:url" content="https://xytjcxy.github.io/tags/git/index.html">
+<meta name="description" content="思路： 数组保存所有数。同时，每个set只记录增量，通过二分查找得到最近snap的数。 关键点，对于没有set的数，即使snap了，也和上一个snap_id是一样的。 12345678910111213141516171819# 这里之所以要用float(&apos;inf&apos;)的原因是，这样当出现第一项相同时，必然往后靠import bisectclass SnapshotArray:    def __i">
+<meta name="keywords" content="leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 1146-二分查找">
+<meta property="og:url" content="https://xytjcxy.github.io/2019/08/04/LeetCode-1146-二分查找/index.html">
 <meta property="og:site_name" content="Air">
-<meta property="og:description" content="Grasp the fate with my hand rather than the fortune!">
+<meta property="og:description" content="思路： 数组保存所有数。同时，每个set只记录增量，通过二分查找得到最近snap的数。 关键点，对于没有set的数，即使snap了，也和上一个snap_id是一样的。 12345678910111213141516171819# 这里之所以要用float(&apos;inf&apos;)的原因是，这样当出现第一项相同时，必然往后靠import bisectclass SnapshotArray:    def __i">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-04T11:17:05.879Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Air">
-<meta name="twitter:description" content="Grasp the fate with my hand rather than the fortune!">
+<meta name="twitter:title" content="LeetCode 1146-二分查找">
+<meta name="twitter:description" content="思路： 数组保存所有数。同时，每个set只记录增量，通过二分查找得到最近snap的数。 关键点，对于没有set的数，即使snap了，也和上一个snap_id是一样的。 12345678910111213141516171819# 这里之所以要用float(&apos;inf&apos;)的原因是，这样当出现第一项相同时，必然往后靠import bisectclass SnapshotArray:    def __i">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://xytjcxy.github.io/tags/git/">
+  <link rel="canonical" href="https://xytjcxy.github.io/2019/08/04/LeetCode-1146-二分查找/">
 
 
 
 
 
-  <title>Tag: git | Air</title>
+  <title>LeetCode 1146-二分查找 | Air</title>
   
 
 
@@ -144,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,52 +249,151 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>git<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/08/04/LeetCode-1146-二分查找/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Air">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Air">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/08/03/git获取指定svn版本的代码/" itemprop="url">
-              
-                <span itemprop="name">git获取指定svn版本的代码</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">LeetCode 1146-二分查找</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-03T21:22:04+08:00" content="2019-08-03">
-          08-03
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-04T19:13:28+08:00">
+                2019-08-04
+              </time>
+            
 
-    </header>
-  </article>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>思路：</p>
+<p>数组保存所有数。同时，每个set只记录增量，通过二分查找得到最近snap的数。</p>
+<p>关键点，对于没有set的数，即使snap了，也和上一个snap_id是一样的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里之所以要用float('inf')的原因是，这样当出现第一项相同时，必然往后靠</span></span><br><span class="line"><span class="keyword">import</span> bisect</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SnapshotArray</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, length: int)</span>:</span></span><br><span class="line">        self.snaps = [[[<span class="number">-1</span>,<span class="number">0</span>]] <span class="keyword">for</span> i <span class="keyword">in</span> range(length)]</span><br><span class="line">        self.snap_id = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set</span><span class="params">(self, index: int, val: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        self.snaps[index].append([self.snap_id,val])</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">snap</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        self.snap_id+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> self.snap_id<span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self, index: int, snap_id: int)</span> -&gt; int:</span></span><br><span class="line">        idx = bisect.bisect_right(self.snaps[index],[snap_id,float(<span class="string">'inf'</span>)])<span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> self.snaps[index][idx][<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/04/落泪的星期六/" rel="next" title="落泪的星期六">
+                <i class="fa fa-chevron-left"></i> 落泪的星期六
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -301,6 +401,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NTc2NC8yMjI3NQ"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -530,6 +639,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -558,6 +671,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

@@ -263,6 +263,258 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/08/04/LeetCode-1146-二分查找/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Air">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Air">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/04/LeetCode-1146-二分查找/" itemprop="url">LeetCode 1146-二分查找</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-04T19:13:28+08:00">
+                2019-08-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>思路：</p>
+<p>数组保存所有数。同时，每个set只记录增量，通过二分查找得到最近snap的数。</p>
+<p>关键点，对于没有set的数，即使snap了，也和上一个snap_id是一样的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里之所以要用float('inf')的原因是，这样当出现第一项相同时，必然往后靠</span></span><br><span class="line"><span class="keyword">import</span> bisect</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SnapshotArray</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, length: int)</span>:</span></span><br><span class="line">        self.snaps = [[[<span class="number">-1</span>,<span class="number">0</span>]] <span class="keyword">for</span> i <span class="keyword">in</span> range(length)]</span><br><span class="line">        self.snap_id = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set</span><span class="params">(self, index: int, val: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        self.snaps[index].append([self.snap_id,val])</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">snap</span><span class="params">(self)</span> -&gt; int:</span></span><br><span class="line">        self.snap_id+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> self.snap_id<span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self, index: int, snap_id: int)</span> -&gt; int:</span></span><br><span class="line">        idx = bisect.bisect_right(self.snaps[index],[snap_id,float(<span class="string">'inf'</span>)])<span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> self.snaps[index][idx][<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/08/04/落泪的星期六/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Air">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Air">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/04/落泪的星期六/" itemprop="url">落泪的星期六</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-04T00:44:41+08:00">
+                2019-08-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>朋友圈里，大家分享着周六的喜悦，我不禁眼眶含泪。</p>
+<p>本来这周还是比较满意的。力扣邀请我去实习，阿里也找我面试，中兴的面试直通卡我也凑巧抽中了，辛苦了一周的换bin也成功了，svn版本号与git节点号之间的对应关系我也找到了。一切的一切，似乎都很顺利。</p>
+<p>可是，为什么我很难笑出来了呢？</p>
+<p>以前的我虽然不爱说话，但很爱笑。记得本科毕业暑假的时候，按理来说是家里最艰难的时候，我走在街上，仍然能莫名奇妙的笑出声来。拍毕业照的时候，我明明对未来有着无限的恐惧，可是仍然能笑的很开心。那时的我，对未来，似乎永远是充满希望~</p>
+<p><img src="/2019/08/04/落泪的星期六/1.jpg" alt="1"></p>
+<p>现在，一切都好了。父母积极向上了，家里经济状况也变的不错了，经常能看到他们在朋友圈里散发着幸福的笑容。反而是我，似乎再也再也没法开心起来了。</p>
+<p><img src="/2019/08/04/落泪的星期六/2.jpg" alt="2"></p>
+<p>看清了世界的本来面貌，看清了现实，似乎，我已经对这个世界不再有任何的期望了。我真的不知道为什么他们能那么开心，为什么我无论如何也做不到。</p>
+<p>为了答辩和面试，我放弃了很喜欢的ChinaJoy。为了转向我喜欢的行业，我错过了一段美好的感情。为了功成名就好装逼，我做着一件又一件违背自己良心的事。这大概就是因为我是菜逼吧。可是，我真的觉得他们也很菜呀。看着他们在我面前装逼，我就很想甩他们一巴掌。可是我知道，甩他们的只能是实力，不能是武力。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/08/03/git获取指定svn版本的代码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -335,6 +587,9 @@
         
           
             <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文主要介绍如何通过git，获取svn指定版本号的代码</p>
+<p>svn的下载、安装、配置参见<a href="https://blog.csdn.net/WinstonLau/article/details/79794967" target="_blank" rel="noopener">https://blog.csdn.net/WinstonLau/article/details/79794967</a></p>
+<p>对同一个项目同时使用svn参见<a href="https://blog.csdn.net/zzxiang1985/article/details/75212244" target="_blank" rel="noopener">https://blog.csdn.net/zzxiang1985/article/details/75212244</a></p>
+<p>本文是因为项目需要，所以必须将svn的版本号和git的节点号对齐。如果你刚开始创建自己的项目，建议还是使用git，毕竟这是主流，同时也方便离线提交代码！</p>
 <h1 id="在git仓库中与远程的svn仓库关联"><a href="#在git仓库中与远程的svn仓库关联" class="headerlink" title="在git仓库中与远程的svn仓库关联"></a>在git仓库中与远程的svn仓库关联</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> -r 1:HEAD,表示更新从版本1到最新版本的svn仓库</span><br><span class="line"><span class="meta">#</span> svn://localhost,表示svn远程仓库的url</span><br><span class="line"><span class="meta">#</span> .,表示将clone的svn更新到当前文件夹下</span><br><span class="line">git svn clone -r 1:HEAD svn://localhost .</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/08/03/git获取指定svn版本的代码/git%E4%B8%8Esvn%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94.png" alt="git与svn仓库关联"></p>
@@ -345,6 +600,8 @@
 <h1 id="将git回退至指定版本"><a href="#将git回退至指定版本" class="headerlink" title="将git回退至指定版本"></a>将git回退至指定版本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 4945ec51baa115ecce9b7fdf78aa8ae716345855</span><br></pre></td></tr></table></figure>
 
 <p><img src="/2019/08/03/git获取指定svn版本的代码/r4.png" alt="r4"></p>
+<h1 id="将git由当前svn版本更新至最新svn版本"><a href="#将git由当前svn版本更新至最新svn版本" class="headerlink" title="将git由当前svn版本更新至最新svn版本"></a>将git由当前svn版本更新至最新svn版本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> git查询当前svn所属版本号，比如我当前是4</span><br><span class="line">git svn log</span><br><span class="line"><span class="meta">#</span> 将git更新至svn最新节点</span><br><span class="line">git svn fetch -r 4:HEAD</span><br></pre></td></tr></table></figure>
+
 
           
         
@@ -1057,7 +1314,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
