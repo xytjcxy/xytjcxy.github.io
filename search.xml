@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[谁偷了我的理想]]></title>
+    <url>%2F2019%2F08%2F09%2F%E8%B0%81%E5%81%B7%E4%BA%86%E6%88%91%E7%9A%84%E7%90%86%E6%83%B3%2F</url>
+    <content type="text"><![CDATA[名字首拼 U2FsdGVkX18wazwBkdFZhTKSLDOT8tP3t/FZzcYOdlPhy7W17JAvMVriTFOQk08L7Vs9uf2ur0Qiw48QT/Al6DzYBqQfRDYWobBuH8QlR64NNsEyeMkjzysCxYE5Td5GmkkV0cMXTWtxpb2Y7+YcyA==]]></content>
+      <tags>
+        <tag>朝花夕拾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 1146-二分查找]]></title>
+    <url>%2F2019%2F08%2F04%2FLeetCode-1146-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%2F</url>
+    <content type="text"><![CDATA[思路： 数组保存所有数。同时，每个set只记录增量，通过二分查找得到最近snap的数。 关键点，对于没有set的数，即使snap了，也和上一个snap_id是一样的。 12345678910111213141516171819# 这里之所以要用float('inf')的原因是，这样当出现第一项相同时，必然往后靠import bisectclass SnapshotArray: def __init__(self, length: int): self.snaps = [[[-1,0]] for i in range(length)] self.snap_id = 0 def set(self, index: int, val: int) -&gt; None: self.snaps[index].append([self.snap_id,val]) def snap(self) -&gt; int: self.snap_id+=1 return self.snap_id-1 def get(self, index: int, snap_id: int) -&gt; int: idx = bisect.bisect_right(self.snaps[index],[snap_id,float('inf')])-1 return self.snaps[index][idx][1]]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[落泪的星期六]]></title>
+    <url>%2F2019%2F08%2F04%2F%E8%90%BD%E6%B3%AA%E7%9A%84%E6%98%9F%E6%9C%9F%E5%85%AD%2F</url>
+    <content type="text"><![CDATA[名字首拼 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]]></content>
+      <tags>
+        <tag>朝花夕拾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git获取指定svn版本的代码]]></title>
+    <url>%2F2019%2F08%2F03%2Fgit%E8%8E%B7%E5%8F%96%E6%8C%87%E5%AE%9Asvn%E7%89%88%E6%9C%AC%E7%9A%84%E4%BB%A3%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[前言本文主要介绍如何通过git，获取svn指定版本号的代码 svn的下载、安装、配置参见https://blog.csdn.net/WinstonLau/article/details/79794967 对同一个项目同时使用svn参见https://blog.csdn.net/zzxiang1985/article/details/75212244 本文是因为项目需要，所以必须将svn的版本号和git的节点号对齐。如果你刚开始创建自己的项目，建议还是使用git，毕竟这是主流，同时也方便离线提交代码！ 在git仓库中与远程的svn仓库关联1234# -r 1:HEAD,表示更新从版本1到最新版本的svn仓库# svn://localhost,表示svn远程仓库的url# .,表示将clone的svn更新到当前文件夹下git svn clone -r 1:HEAD svn://localhost . git查询指定svn版本对应的节点假设我想查询r4对应的git节点号 12git svn reset r4# 会显示：r4 = 4945ec51baa115ecce9b7fdf78aa8ae716345855 (refs/remotes/git-svn) 将git回退至指定版本1git reset --hard 4945ec51baa115ecce9b7fdf78aa8ae716345855 将git由当前svn版本更新至最新svn版本1234# git查询当前svn所属版本号，比如我当前是4git svn log# 将git更新至svn最新节点git svn fetch -r 4:HEAD]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode 1140-化整为零的DP求解思路]]></title>
+    <url>%2F2019%2F07%2F28%2F%E5%8C%96%E6%95%B4%E4%B8%BA%E9%9B%B6%E7%9A%84DP%E6%B1%82%E8%A7%A3%E6%80%9D%E8%B7%AF%2F</url>
+    <content type="text"><![CDATA[思路：本题是要求解在1:n的石子堆内，先出手者的最大收益。 dp(i,j)表示，i:n的石子堆内，先出手者的最大收益。 代码：1234567891011121314151617181920212223class Solution: def stoneGameII(self, piles: List[int]) -&gt; int: piles.insert(0, 0) n = len(piles) for i in range(1, n): piles[i] += piles[i - 1] a = [[0] * n for i in range(n)] def dp(i, j): if n - i &lt;= 2 * j: return piles[n - 1] - piles[i - 1] if a[i][j] &gt; 0: return a[i][j] for k in range(2 * j): if i + k &gt;= n: break if a[i][j] == 0: a[i][j] = piles[n - 1] - piles[i - 1] - dp(i + k + 1, max(k + 1, j)) else: a[i][j] = max(a[i][j], piles[n - 1] - piles[i - 1] - dp(i + k + 1, max(k + 1, j))) return a[i][j] return dp(1, 1) 反思：dp问题分两种，1）每增加一项，寻找第i项与第i-1项之间的递推关系。2）将大的范围，逐渐减小至小范围，临界条件已知，最后求解大范围处的值。]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Scons介绍]]></title>
+    <url>%2F2019%2F07%2F28%2FScons%E4%BB%8B%E7%BB%8D%2F</url>
+    <content type="text"><![CDATA[Scons介绍1 简介Scons是一个python写的编译工具，与makefile功能类似，但能兼容makefile，同时更加智能，可以自动解析系统的include路径、typedef等。 2 Scons文件1）配置文件：与scons命令位于同一目录下的SConstruct、Sconstruct、sconstruct文件 2）SConstruct使用函数SConscript()来定附属配置文件，这些附属配置文件被命名为SConscript。附属配置文件将脚本内的目标文件编译后传给SConstruct 学习参考：https://blog.csdn.net/sealyao/article/details/6402257]]></content>
+      <tags>
+        <tag>编译原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[华为实习——痛苦&快乐]]></title>
+    <url>%2F2019%2F07%2F27%2F%E7%97%9B%E8%8B%A6%E5%B9%B6%E5%BF%AB%E4%B9%90%E7%9A%84%E5%8D%8E%E4%B8%BA%E5%AE%9E%E4%B9%A01%2F</url>
+    <content type="text"><![CDATA[这周的心情，应该算是跌入谷底了吧。一篇杂谈，吐槽我低落的心情~ 师父让我做一个自动出bin的工具，思路很简单，但当所有的需求都完成后，我居然花了一周。 今年华为的校招形势比往年都严峻，我不清楚我得多努力才能被认可，才能被留用。 在华为每天准点下班，居然被师父怼了。他对我的训斥，记忆犹新——命运要掌握在自己的手里，不要交给运气。如果你不好好干，就回去继续搞土木吧！ 之前一直以为答辩时间早8月底，所以就一直很放松。但没想到提前到8月中旬了。时间不等人，我得马上进入备考状态了！ 之前答应老师的一篇论文，估计8月底写不出来了。成果都有了，但如果让我现在分心去写论文，我做不到。上次面试阿里的悲剧，我绝不要重复！ LTE的那本书总算到了，接下来得要好好准备复习之前所学的内容了。 如果我们组今年只招1个，我一定要努力到，能留用的那1个就是我！I am the best, others are trashes!]]></content>
+      <tags>
+        <tag>朝花夕拾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode1131 最远曼哈顿距离]]></title>
+    <url>%2F2019%2F07%2F21%2FLeetCode1131-%E6%9C%80%E8%BF%9C%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB%2F</url>
+    <content type="text"><![CDATA[题目：给你两个长度相等的整数数组，返回下面表达式的最大值： 1|arr1[i] - arr1[j]| + |arr2[i] - arr2[j]| + |i - j| 其中下标 i，j 满足 0 &lt;= i, j &lt; arr1.length。 思路：其实这道题的引申问题也就是求最远曼哈顿距离。而最远曼哈顿距离也可以引申为新增一个点，求该点到一群点的最大曼哈顿距离。 最大曼哈顿距离的求解方法： 1234|x1 - x2| + |y1 - y2| 等价于 x1-x2 + y1-y2 (1,1), -x1+x2 + -y1+y2 (-1,-1), x1-x2 + -y1+y2 (1,-1), -x1+x2 + y1-y2 (-1,1) 也就等价于 (x1,y1)-(x2,y2),(-(x1,y1))-(-(x2,y2)),(x1,-y1)-(x2,-y2),(-x1,y1)-(-x2,y2)最后的最大距离的点，必然是位于这四种情况中的某一种，因此对于每种情况，保留其中的min坐标，对于新加入的点，若为最大，必然是减去min坐标 12345678910class Solution: def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -&gt; int: res = 0 for i, j in [[1, 1], [1, -1], [-1, -1], [-1, 1]]: close = arr1[0] * i + arr2[0] * j for k in range(1, len(arr1)): p = arr1[k] * i + arr2[k] * j + k res = max(res, p - close) close = min(close, p) return res 反思：这道题其实很有借鉴意义，因为之前面试的时候就遇到过这道题，结果没有做出来。原来就是四种情况，每次保存每种情况最小的那个坐标即可。]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode1130-DP]]></title>
+    <url>%2F2019%2F07%2F20%2Fleetcode1130%2F</url>
+    <content type="text"><![CDATA[leetcode 1130 思路: dp[i,j]=min(dp[i,k]+dp[k+1,j]+max(arr[i:k+1])*max(arr[k+1:j+1]) 因此，直接使用dp函数求解 12345678910111213141516class Solution: def mctFromLeafValues(self, arr: List[int]) -&gt; int: a = [[0] * len(arr) for i in range(len(arr))] def dp(i, j): if i == j: return 0 if a[i][j] != 0: return a[i][j] res = float('inf') for k in range(i, j): res = min(res, dp(i, k) + dp(k + 1, j) + max(arr[i:k + 1]) * max(arr[k + 1:j + 1])) a[i][j] = res return res return dp(0, len(arr) - 1) 反思：因为很久没有做leetcode的题目了，结果这道这么简单的题都没有做出来，是时候反省一下自己了。为什么最近自己总是想着玩，没有认真对待自己的代码。对于coder而言，代码就是自己的尊严呀！]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+</search>
