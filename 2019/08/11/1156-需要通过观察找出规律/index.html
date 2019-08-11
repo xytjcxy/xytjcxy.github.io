@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="这里讲讲我抛弃csdn，想创建自己个人博客的原因吧！ CSDN，很简单，人们可以很轻松的在上面撰写博客，实现博客部署与文章创作之间的解耦。但是，就是因为太简单，给创作者在UI上的发挥空间也就很少。很多创作者都是理科生，工科男，很难有太好的文笔，所以一个好的UI对文章魅力的提升，也就显现出来了！ 其次，使用CSDN创作的博客，总是被百度、谷歌、CSDN等巨头强行塞入广告，大大影响了阅读体验。记得今年">
-<meta name="keywords" content="欢迎！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://xytjcxy.github.io/about/index.html">
+<meta name="description" content="思路：本题如果要实现字符串长度增长，只需要考虑两种场景。  aaabaaa，对于b，左和右相等，这时候，总长度是len(left)+len(right)+int(total(a)&amp;gt;current(a)) aaabba，对于a，长度为len(a)+int(total(a)&amp;gt;current(a))  因此，代码如下 123456789class Solution:    def maxRe">
+<meta name="keywords" content="leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 1156 需要通过观察找出规律">
+<meta property="og:url" content="https://xytjcxy.github.io/2019/08/11/1156-需要通过观察找出规律/index.html">
 <meta property="og:site_name" content="Air">
-<meta property="og:description" content="这里讲讲我抛弃csdn，想创建自己个人博客的原因吧！ CSDN，很简单，人们可以很轻松的在上面撰写博客，实现博客部署与文章创作之间的解耦。但是，就是因为太简单，给创作者在UI上的发挥空间也就很少。很多创作者都是理科生，工科男，很难有太好的文笔，所以一个好的UI对文章魅力的提升，也就显现出来了！ 其次，使用CSDN创作的博客，总是被百度、谷歌、CSDN等巨头强行塞入广告，大大影响了阅读体验。记得今年">
+<meta property="og:description" content="思路：本题如果要实现字符串长度增长，只需要考虑两种场景。  aaabaaa，对于b，左和右相等，这时候，总长度是len(left)+len(right)+int(total(a)&amp;gt;current(a)) aaabba，对于a，长度为len(a)+int(total(a)&amp;gt;current(a))  因此，代码如下 123456789class Solution:    def maxRe">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://xytjcxy.github.io/about/index/disney.jpg">
-<meta property="og:updated_time" content="2019-08-10T13:07:49.632Z">
+<meta property="og:updated_time" content="2019-08-11T07:56:42.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="这里讲讲我抛弃csdn，想创建自己个人博客的原因吧！ CSDN，很简单，人们可以很轻松的在上面撰写博客，实现博客部署与文章创作之间的解耦。但是，就是因为太简单，给创作者在UI上的发挥空间也就很少。很多创作者都是理科生，工科男，很难有太好的文笔，所以一个好的UI对文章魅力的提升，也就显现出来了！ 其次，使用CSDN创作的博客，总是被百度、谷歌、CSDN等巨头强行塞入广告，大大影响了阅读体验。记得今年">
-<meta name="twitter:image" content="https://xytjcxy.github.io/about/index/disney.jpg">
+<meta name="twitter:title" content="LeetCode 1156 需要通过观察找出规律">
+<meta name="twitter:description" content="思路：本题如果要实现字符串长度增长，只需要考虑两种场景。  aaabaaa，对于b，左和右相等，这时候，总长度是len(left)+len(right)+int(total(a)&amp;gt;current(a)) aaabba，对于a，长度为len(a)+int(total(a)&amp;gt;current(a))  因此，代码如下 123456789class Solution:    def maxRe">
 
 
 
@@ -122,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="https://xytjcxy.github.io/about/">
+  <link rel="canonical" href="https://xytjcxy.github.io/2019/08/11/1156-需要通过观察找出规律/">
 
 
 
@@ -130,7 +128,7 @@
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
 
-  <title>关于 | Air</title>
+  <title>LeetCode 1156 需要通过观察找出规律 | Air</title>
   
 
 
@@ -287,38 +285,155 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/08/11/1156-需要通过观察找出规律/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Air">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/血小板.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Air">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">关于</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>这里讲讲我抛弃csdn，想创建自己个人博客的原因吧！</p>
-<p>CSDN，很简单，人们可以很轻松的在上面撰写博客，实现博客部署与文章创作之间的解耦。但是，就是因为太简单，给创作者在UI上的发挥空间也就很少。很多创作者都是理科生，工科男，很难有太好的文笔，所以一个好的UI对文章魅力的提升，也就显现出来了！</p>
-<p>其次，使用CSDN创作的博客，总是被百度、谷歌、CSDN等巨头强行塞入广告，大大影响了阅读体验。记得今年年初，CSDN傻逼添加了一个动态广告，搞得我每次看文章的时候，总有一个亮闪闪的东西在我眼前晃呀晃，贼难受！现在终于能脱离CSDN了，简直开心的不要不要的！</p>
-<p>最后，本人就是喜欢装逼，如果用CSDN，又怎么能体现出我的牛逼呢？</p>
-<p><img src="/about/index/disney.jpg" alt="hexo image"></p>
-
+          <h1 class="post-title" itemprop="name headline">LeetCode 1156 需要通过观察找出规律</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-11T14:11:22+08:00">
+                2019-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>思路：本题如果要实现字符串长度增长，只需要考虑两种场景。</p>
+<ol>
+<li>aaabaaa，对于b，左和右相等，这时候，总长度是len(left)+len(right)+int(total(a)&gt;current(a))</li>
+<li>aaabba，对于a，长度为len(a)+int(total(a)&gt;current(a))</li>
+</ol>
+<p>因此，代码如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxRepOpt1</span><span class="params">(self, text: str)</span> -&gt; int:</span></span><br><span class="line">        grap = [[c,len(list(v))] <span class="keyword">for</span> c,v <span class="keyword">in</span> itertools.groupby(text)]</span><br><span class="line">        num = collections.Counter(text)</span><br><span class="line">        res = max(min(k+<span class="number">1</span>,num[c])<span class="keyword">for</span> c,k <span class="keyword">in</span> grap)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(grap)):</span><br><span class="line">            <span class="keyword">if</span> grap[i][<span class="number">1</span>]==<span class="number">1</span> <span class="keyword">and</span> i+<span class="number">1</span> != len(grap) <span class="keyword">and</span> grap[i<span class="number">-1</span>][<span class="number">0</span>]==grap[i+<span class="number">1</span>][<span class="number">0</span>]:</span><br><span class="line">                res = max(res,min(grap[i<span class="number">-1</span>][<span class="number">1</span>]+grap[i+<span class="number">1</span>][<span class="number">1</span>]+<span class="number">1</span>,num[grap[i<span class="number">-1</span>][<span class="number">0</span>]]))</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/09/谁偷了我的理想/" rel="next" title="谁偷了我的理想">
+                <i class="fa fa-chevron-left"></i> 谁偷了我的理想
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/11/通过随机数来碰运气过OJ/" rel="prev" title="LeetCode 1157 通过随机数来碰运气过OJ">
+                LeetCode 1157 通过随机数来碰运气过OJ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 

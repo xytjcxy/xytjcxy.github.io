@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="这里讲讲我抛弃csdn，想创建自己个人博客的原因吧！ CSDN，很简单，人们可以很轻松的在上面撰写博客，实现博客部署与文章创作之间的解耦。但是，就是因为太简单，给创作者在UI上的发挥空间也就很少。很多创作者都是理科生，工科男，很难有太好的文笔，所以一个好的UI对文章魅力的提升，也就显现出来了！ 其次，使用CSDN创作的博客，总是被百度、谷歌、CSDN等巨头强行塞入广告，大大影响了阅读体验。记得今年">
-<meta name="keywords" content="欢迎！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://xytjcxy.github.io/about/index.html">
+<meta name="description" content="思路： 本题我之前想过是否有什么方法可以过，但似乎没有必定正确的方法。如果有，应该也只是c++和Java的暴力法能过了。 一个取巧的方法，随机在left和right中取100个数，记录这100个数的出现次数。如果数的种类超过3个，只有出现次数大于10的才去判断是否大于阈值。如果种类小于3个，则所有的数都参与判断。 时间复杂段300 O(log n) 123456789101112131415161">
+<meta name="keywords" content="leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 1157 通过随机数来碰运气过OJ">
+<meta property="og:url" content="https://xytjcxy.github.io/2019/08/11/通过随机数来碰运气过OJ/index.html">
 <meta property="og:site_name" content="Air">
-<meta property="og:description" content="这里讲讲我抛弃csdn，想创建自己个人博客的原因吧！ CSDN，很简单，人们可以很轻松的在上面撰写博客，实现博客部署与文章创作之间的解耦。但是，就是因为太简单，给创作者在UI上的发挥空间也就很少。很多创作者都是理科生，工科男，很难有太好的文笔，所以一个好的UI对文章魅力的提升，也就显现出来了！ 其次，使用CSDN创作的博客，总是被百度、谷歌、CSDN等巨头强行塞入广告，大大影响了阅读体验。记得今年">
+<meta property="og:description" content="思路： 本题我之前想过是否有什么方法可以过，但似乎没有必定正确的方法。如果有，应该也只是c++和Java的暴力法能过了。 一个取巧的方法，随机在left和right中取100个数，记录这100个数的出现次数。如果数的种类超过3个，只有出现次数大于10的才去判断是否大于阈值。如果种类小于3个，则所有的数都参与判断。 时间复杂段300 O(log n) 123456789101112131415161">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://xytjcxy.github.io/about/index/disney.jpg">
-<meta property="og:updated_time" content="2019-08-10T13:07:49.632Z">
+<meta property="og:updated_time" content="2019-08-11T07:56:29.046Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="这里讲讲我抛弃csdn，想创建自己个人博客的原因吧！ CSDN，很简单，人们可以很轻松的在上面撰写博客，实现博客部署与文章创作之间的解耦。但是，就是因为太简单，给创作者在UI上的发挥空间也就很少。很多创作者都是理科生，工科男，很难有太好的文笔，所以一个好的UI对文章魅力的提升，也就显现出来了！ 其次，使用CSDN创作的博客，总是被百度、谷歌、CSDN等巨头强行塞入广告，大大影响了阅读体验。记得今年">
-<meta name="twitter:image" content="https://xytjcxy.github.io/about/index/disney.jpg">
+<meta name="twitter:title" content="LeetCode 1157 通过随机数来碰运气过OJ">
+<meta name="twitter:description" content="思路： 本题我之前想过是否有什么方法可以过，但似乎没有必定正确的方法。如果有，应该也只是c++和Java的暴力法能过了。 一个取巧的方法，随机在left和right中取100个数，记录这100个数的出现次数。如果数的种类超过3个，只有出现次数大于10的才去判断是否大于阈值。如果种类小于3个，则所有的数都参与判断。 时间复杂段300 O(log n) 123456789101112131415161">
 
 
 
@@ -122,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="https://xytjcxy.github.io/about/">
+  <link rel="canonical" href="https://xytjcxy.github.io/2019/08/11/通过随机数来碰运气过OJ/">
 
 
 
@@ -130,7 +128,7 @@
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
 
-  <title>关于 | Air</title>
+  <title>LeetCode 1157 通过随机数来碰运气过OJ | Air</title>
   
 
 
@@ -287,38 +285,149 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xytjcxy.github.io/2019/08/11/通过随机数来碰运气过OJ/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Air">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/血小板.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Air">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">关于</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>这里讲讲我抛弃csdn，想创建自己个人博客的原因吧！</p>
-<p>CSDN，很简单，人们可以很轻松的在上面撰写博客，实现博客部署与文章创作之间的解耦。但是，就是因为太简单，给创作者在UI上的发挥空间也就很少。很多创作者都是理科生，工科男，很难有太好的文笔，所以一个好的UI对文章魅力的提升，也就显现出来了！</p>
-<p>其次，使用CSDN创作的博客，总是被百度、谷歌、CSDN等巨头强行塞入广告，大大影响了阅读体验。记得今年年初，CSDN傻逼添加了一个动态广告，搞得我每次看文章的时候，总有一个亮闪闪的东西在我眼前晃呀晃，贼难受！现在终于能脱离CSDN了，简直开心的不要不要的！</p>
-<p>最后，本人就是喜欢装逼，如果用CSDN，又怎么能体现出我的牛逼呢？</p>
-<p><img src="/about/index/disney.jpg" alt="hexo image"></p>
-
+          <h1 class="post-title" itemprop="name headline">LeetCode 1157 通过随机数来碰运气过OJ</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-11T15:41:08+08:00">
+                2019-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>思路：</p>
+<p>本题我之前想过是否有什么方法可以过，但似乎没有必定正确的方法。如果有，应该也只是c++和Java的暴力法能过了。</p>
+<p>一个取巧的方法，随机在left和right中取100个数，记录这100个数的出现次数。如果数的种类超过3个，只有出现次数大于10的才去判断是否大于阈值。如果种类小于3个，则所有的数都参与判断。</p>
+<p>时间复杂段300 O(log n)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> collections</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> bisect</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MajorityChecker</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, arr)</span>:</span></span><br><span class="line">        self.array = arr</span><br><span class="line">        self.arr = collections.defaultdict(list)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(arr)):</span><br><span class="line">            self.arr[arr[i]].append(i)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">query</span><span class="params">(self, left: int, right: int, threshold: int)</span> -&gt; int:</span></span><br><span class="line">        a = collections.defaultdict(int)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>):</span><br><span class="line">            p = self.array[random.randint(left, right)]</span><br><span class="line">            a[p] += <span class="number">1</span></span><br><span class="line">        keys = []</span><br><span class="line">        <span class="keyword">if</span> len(a.keys()) &gt; <span class="number">3</span>:</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> a.keys():</span><br><span class="line">                <span class="keyword">if</span> a[k] &gt; <span class="number">10</span>:</span><br><span class="line">                    keys.append(a[k])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            keys = a.keys()</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> keys:</span><br><span class="line">            l = bisect.bisect(self.arr[k], left - <span class="number">1</span>)</span><br><span class="line">            r = bisect.bisect(self.arr[k], right)</span><br><span class="line">            <span class="keyword">if</span> r - l &gt;= threshold:</span><br><span class="line">                <span class="keyword">return</span> k</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/11/1156-需要通过观察找出规律/" rel="next" title="LeetCode 1156 需要通过观察找出规律">
+                <i class="fa fa-chevron-left"></i> LeetCode 1156 需要通过观察找出规律
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
